@@ -21,7 +21,7 @@ if ( $posts_ids ) {
 
 	if ( $q->have_posts() ) { ?>
 
-		<div class="wrapper">
+		<div class="wrapper col">
 
 			<?php while ( $q->have_posts() ) { $q->the_post(); ?>
 
