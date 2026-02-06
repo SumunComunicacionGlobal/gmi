@@ -64,6 +64,7 @@ $sumun_includes = array(
     // '/dummy-content.php',
     '/svg-sumun.php',
     '/seo.php',
+    '/smn-acf.php'
 );
 
 foreach ( $sumun_includes as $file ) {
