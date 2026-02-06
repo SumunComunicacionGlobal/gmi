@@ -50,6 +50,10 @@ $post_type = get_post_type();
 
 						<?php endwhile; ?>
 
+						<?php if ( is_tax() ) {
+							get_template_part( 'global-templates/content-fragments', '', array('post_ids' => get_term_meta( get_queried_object_id(), 'bottom_fragments', true ) ) );
+						} ?>
+
 					<?php if ('producto' == $post_type) echo '</div>';
 					
 					echo smn_get_proyectos_realizados();
