@@ -1,0 +1,162 @@
+html {
+	scroll-behavior: smooth;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.admin-bar {
+
+	.fixed-top {
+		top: 46px;
+	}
+}
+
+.alignfull {
+	margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+	margin-top: 64px;
+	margin-bottom: 64px;
+}
+
+.redes-sociales {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		opacity: .4;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.red-social {
+		font-size: 2rem;
+		margin-right: 1rem;
+	}
+
+}
+
+.bg-cover { 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+.full-screen {
+	min-height: calc( 100vh - 100px );
+}
+.has-background:not(.wp-block-separator) {
+	padding: 1rem;
+}
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.wp-block-image figcaption {
+	font-size: $font-size-sm;
+}
+.object-fit-cover {
+	object-fit: cover;
+}
+.wp-block-table {
+	th, td {
+		padding: .8rem;
+	}
+}
+.pagination {
+	margin-top: 2rem;
+}
+.comments-area {
+	margin-top: 3rem;
+}
+
+/* Slider */
+.slide-wrapper {
+	height: 350px;
+	display: flex;
+	align-items: center;
+}
+/***/
+
+/* Tipografía */
+.has-large-font-size, .has-large-font-size, .has-huge-font-size {
+	line-height: 1.2;
+}
+
+/***/
+/* Formularios */
+.wpcf7 {
+	max-width: 100% !important;
+}
+label {
+	font-size: $font-size-sm;
+}
+.wpcf7-response-output {
+    height: auto !important;
+}
+/***/
+
+/* Blog */
+.post-navigation {
+	margin-top: $spacer * 2;
+	.nav-links {
+		font-weight: $font-weight-bold;
+	}
+}
+.logged-in-as a:first-child {
+	font-weight: $font-weight-bold;
+}
+/***/
+
+/* Widgets */
+.widget-area {
+
+	.widget {
+		margin-bottom: 2rem;
+	}
+}
+/***/
+/* Footer */
+.footer-widget {
+	margin-bottom: 1rem;
+}
+/***/
+@each $color, $value in $theme-colors {
+  .has-#{$color}-color {
+  	color: $value !important;
+  }
+  .has-#{$color}-background-color, 
+  .wp-block-cover-image.has-background-dim.has-#{$color}-background-color,
+  .wp-block-cover.has-background-dim.has-#{$color}-background-color {
+  	background-color: $value;
+  }
+  .btn-outline-#{$color}:hover {
+  	background-color: transparent;
+  	color: $value;
+  }
+}
+@each $color, $value in $colors {
+  .has-#{$color}-color {
+  	color: $value !important;
+  }
+  .has-#{$color}-background-color, 
+  .wp-block-cover-image.has-background-dim.has-#{$color}-background-color,
+  .wp-block-cover.has-background-dim.has-#{$color}-background-color {
+  	background-color: $value;
+  }
+}
+
+@include media-breakpoint-up(md) {
+	.admin-bar {
+
+		.fixed-top {
+			top: 32px;
+		}
+	}
+}

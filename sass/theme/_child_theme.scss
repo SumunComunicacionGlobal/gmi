@@ -1,0 +1,902 @@
+/* General */
+.is-style-outline .wp-block-button__link {
+	border-width: 4px;
+	padding-right: $input-btn-padding-x * 3;
+	padding-left: $input-btn-padding-x * 3;
+}
+.btn-plus {
+	padding-left: $input-btn-padding-x;
+	padding-right: $input-btn-padding-x * 5;
+
+	&:after {
+		content: url('../img/mas.svg');
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.redes-sociales {
+	justify-content: flex-start;
+}
+.contenido-adicional {
+	margin-top: 3rem;
+	text-align: center;
+}
+/* Marcas de corte en objetos */
+.marcas-corte {
+	position: absolute;
+	left: -1.4rem;
+	right: -1.4rem;
+	top: -1.4rem;
+	bottom: -1.4rem;
+	pointer-events: none;
+
+	.btn-marca {
+		position: absolute;
+		background-image: url('../img/marca-corte.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 1.2rem;
+		height: 1.2rem;
+		transition: opacity .2s;
+
+		&:nth-child(1) {
+			top: 0;
+			left: 0;
+			transform: rotate(0deg);
+		}
+		&:nth-child(2) {
+			top: 0;
+			right: 0;
+			transform: rotate(90deg);
+		}
+		&:nth-child(3) {
+			bottom: 0;
+			right: 0;
+			transform: rotate(180deg);
+		}
+		&:nth-child(4) {
+			bottom: 0;
+			left: 0;
+			transform: rotate(270deg);
+		}
+	}
+
+}
+
+.btn-cut, .tiene-marcas-de-corte, #right-sidebar .widget:not(.widget_search) {
+	position: relative;
+	// margin: 1.6rem;
+	transition: all .3s;
+	border: 1px dotted $secondary;
+
+	&:not(.btn-cut) {
+		padding: 1rem;
+	}
+	&.btn-cut {
+		border-style: solid;
+
+		box-shadow: 0 0 0 3px $secondary;
+
+		.btn-marca {
+			opacity: 0;
+			
+			&:nth-child(1) {
+				transition-delay: 0.0s;
+			}
+			&:nth-child(2) {
+				transition-delay: 0.2s;
+			}
+			&:nth-child(3) {
+				transition-delay: 0.1s;
+			}
+			&:nth-child(4) {
+				transition-delay: 0.3s;
+			}
+		}
+		&.btn-white, &.btn-outline-white {
+			box-shadow: 0 0 0 3px $white;
+			.btn-marca {
+				background-image: url('../img/marca-corte-white.svg');
+			}
+		}
+
+		&:hover {
+			border-style: dotted;
+			border-width: 1px;
+			box-shadow: none;
+
+
+			.btn-marca {
+				opacity: 1;
+			}
+
+		}
+	}
+}
+/***/
+
+.wpcf7 input[type="submit"] {
+	margin: 0;
+	width: auto;
+	margin-right: 0;
+	margin-left: auto;
+	padding-right: $input-btn-padding-x * 2;
+	padding-top: $input-btn-padding-y * 2;
+	padding-bottom: $input-btn-padding-y * 2;
+	height: auto;
+}
+.post-type-name {
+	font-weight: $font-weight-bold;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+a.read-more, .taxonomy-description a, p.read-more a {
+	padding-left: 48px;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	background-image: url('../img/arrow-right-circle.svg');
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 40px auto;
+	font-weight: $font-weight-bold;
+	font-size: 1rem;
+}
+.text-white a.read-more, .text-white .taxonomy-description a {
+	background-image: url('../img/arrow-right-circle-white.svg');
+}
+.wp-block-gallery.logos .blocks-gallery-item {
+	margin-bottom: 48px;
+
+	figure {
+		justify-content: center;
+		align-items: center;
+	}
+}
+.telefono {
+	height: 40px;
+	line-height: 40px;
+	font-weight: $font-weight-bold;
+	font-size: 1.2rem;
+}
+.img-telefono {
+	svg, path {
+		fill: $secondary;
+	}
+}
+.text-white, #wrapper-navbar, #wrapper-footer-full, #wrapper-footer {
+	svg, path {
+		fill: $white;
+	}
+}
+.widget, .footer-widget {
+	margin-bottom: 1.5rem;
+}
+#right-sidebar {
+	.widget {
+		// background-color: $lightgray;
+		padding: 1rem;
+		margin: 0 1.6rem 4rem!important;
+
+		.widget-title {
+			font-size: $h5-font-size;
+		}
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+	}
+}
+.page-template-frontpage #full-width-page-wrapper {
+	padding-top: 0;
+}
+.dots, .dots svg {
+	width: 74px;
+	height: 74px;
+}
+
+path {
+	transition: fill .3s ease;
+}
+.taxonomy-description {
+	font-size: 1.2rem;
+}
+.text-white {
+	a {
+		color: $white;
+	}
+}
+.wp-block-columns {
+	margin-bottom: $spacer * 3;
+}
+.info-basica-privacidad {
+	font-size: $font-size-sm;
+}
+/***/
+
+/* Testimonios */
+.carousel .testimonio {
+	color: $secondary;
+
+	.carousel-item-inner {
+		background-position: right 40% top;
+	}
+	.testimonio-content-wrapper {
+		max-width: 400px;
+	}
+
+	.numero-slide {
+
+	}
+	.titulo-testimonio {
+
+	}
+	.contenido-testimonio {
+		font-size: $font-size-base * 1.3;
+		font-style: italic;
+	}
+}
+.cargo {
+	font-weight: $font-weight-bold;
+}
+.pastilla-cabecera-testimonio {
+	position: relative;
+
+	.contenido-pastilla {
+		position: absolute;
+		max-width: 400px;
+		left: 30px;
+		bottom: 60px;
+	}
+}
+/***/
+
+/* Cabecera */
+#wrapper-navbar {
+	z-index: 10000;
+	transition: all .3s ease;
+
+	.navbar-logo-group {
+		.dots-navbar {
+			width: 75px;
+			height: 75px;
+			margin-right: -46px;
+
+			svg {
+				width: 75px;
+				height: 75px;
+			}
+		}
+		.img-fluid {
+			margin-top: 24px;
+		}
+	}
+
+	.navbar-menu-group {
+		display: flex;
+		align-items: center;
+
+		.telefono {
+			color: $white;
+			margin-right: 1.5rem;
+			padding-right: 1.5rem;
+			border-right: 1px solid;
+
+			.img-telefono svg {
+				height: 40px;
+				width: 24px;
+				animation-name: ring;
+				animation-duration: 2s;
+			}
+		}
+	}
+}
+body.scrolled:not(.menu-abierto) #wrapper-navbar {
+	background-color: $primary;
+	border-bottom: 1px solid $white;
+}
+body {
+	&.menu-abierto #wrapper-navbar {
+		background-color: $dark;
+	}
+}
+.cabecera {
+	padding-top: 140px;
+
+	.col-imagen-cabecera {
+		margin-bottom: -80px;
+		align-self: flex-end;
+	}
+	.icono {
+		margin-bottom: 1rem;
+	}
+
+	+ .wrapper {
+		padding: 80px 0;
+	}
+}
+@include media-breakpoint-up(sm) {
+	.cabecera, .wp-block-cover__inner-container {
+		background-image: url('../img/marca-registro-white.svg'), url('../img/marca-registro-white.svg');
+		background-position: center left 10px, center right 10px;
+		background-size: 2rem;
+		background-repeat: no-repeat;
+
+		+ .wrapper {
+			background-image: url('../img/marca-registro.svg'), url('../img/marca-registro.svg'), url('../img/marca-registro.svg'), url('../img/marca-registro.svg');
+			background-size: 2rem;
+			background-repeat: no-repeat;
+			background-position: top 33% left 10px, top 33% right 10px, top 66% left 10px, top 66% right 10px;
+		}
+	}
+}
+#archive-wrapper {
+	padding-bottom: 0;
+
+	.no-results {
+		margin-bottom: 3rem;
+	}
+}
+.navbar-toggler {
+	width: 60px;
+	height: 40px;
+	// background-color: black;
+	position: relative;
+	z-index: 10000;
+	outline: 0;
+
+	.slot {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 3px;
+		width: 100%;
+		background-color: $white;
+		transform-origin: 50% 50%;
+
+		transition: all .2s ease;
+
+		&.slot-1 {
+			top: 30%;
+		}
+		&.slot-2 {
+			top: 70%;
+			width: 65%;
+		}
+
+	}
+
+	&:hover {
+
+		.slot {
+			width: 80%;
+			left: 10%;
+
+			&.slot-1 {
+				top: 35%;
+			}
+			&.slot-2 {
+				top: 65%;
+			}
+		}
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&.cerrar {
+		.slot {
+			width: 100%;
+			left: 0%;
+
+			&.slot-1 {
+				top: 50%;
+				transform: rotate(45deg);
+			}
+			&.slot-2 {
+				top: 50%;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+}
+
+#menu-principal {
+	a {
+		color: $white;
+	}
+	.modal-content {
+		background-color: transparent;
+		border: 0;
+		// padding-top: 150px;
+		padding: 150px 2rem 2rem;
+	}
+	.menu-principal-container {
+
+		.menu {
+			padding-left: 0;
+			list-style: none;
+
+			> li {
+				margin: .8rem 0;
+
+				> a {
+					font-size: $h2-font-size;
+					line-height: .9;
+					font-weight: $font-weight-bold;
+					position: relative;
+
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -20px;
+						top: 53%;
+						height: 3px;
+						background-color: $primary;
+						width: 0%;
+						transition: width .3s ease;
+					}
+					&:hover {
+
+						&:hover:after {
+						}
+					}
+				}
+
+				&.current-menu-item > a, &.current-menu-ancestor > a, > a:hover {
+					text-decoration: none;
+
+					&:after {
+						width: calc( 100% + 40px );
+					}
+				}
+			}
+		}
+	}
+}
+/***/
+
+/* Terms carrusel */
+.numero-carrusel {
+	text-align: right;
+	font-weight: $font-weight-bold;
+}
+.term-block {
+	position: relative;
+	min-height: 300px !important;
+	border: 4px solid;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 4px;
+	transition: all .3s ease;
+
+	path {
+		fill: $secondary;
+	}
+
+	.term-block-icon {
+		img, svg {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+	}
+	.term-block-title {
+		text-transform: lowercase;
+		font-weight: $font-weight-bold;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	.term-block-footer .dots-carrusel {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		transform: rotate(180deg);
+	}
+
+	&:hover {
+		background-color: $primary;
+		color: $white;
+		text-decoration: none;
+		border-color: $primary;
+
+		path, svg {
+			fill: $white;
+		}
+	}
+}
+.has-primary-background-color, .wp-block-cover .wp-block-cover__inner-container, .text-white {
+	.term-block {
+		color: $white;
+
+		path, svg {
+			fill: $white;
+		}
+
+		&:hover {
+			color: $secondary;
+			background-color: $white;
+			border-color: $white;
+
+			path, svg {
+				fill: $secondary;
+			}
+		}
+	}
+}
+
+.slick-terms .slick-list {
+	margin: 0 -20px;
+	.slick-item {
+		margin: 0 20px;
+	}
+}
+
+/***/
+
+/* Footer */
+.footer-widget {
+	text-align: center;
+}
+#wrapper-footer-full, #wrapper-footer {
+	background-color: $dark;
+	color: $white;
+
+	a {
+		color: $white;
+	}
+}
+#wrapper-footer {
+	.widget_nav_menu {
+		.menu {
+			display: flex;
+			list-style: none;
+			padding-left: 0;
+			justify-content: center;
+			margin-top: 2rem;
+
+			> li {
+				margin: 0 6px;
+			}
+		}
+	}
+	.marca-registro {
+		display: table;
+		margin: 0 auto;
+		svg {
+			width: 2rem;
+		}
+	}
+}
+#wrapper-prefooter-nav {
+	border-top: 1px solid $white;
+
+	.prefooter-nav {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		a {
+			margin: .3rem 1rem;
+		}
+	}
+}
+/***/
+/* Forms */
+.text-white .wpcf7 {
+
+	input[type="text"], input[type="email"], input[type="submit"], textarea {
+		background-color: transparent;
+		color: $white;
+	}
+	input[type="submit"] {
+		border: 2px solid $white;
+	}
+}
+/***/
+
+/* Animaciones */
+@keyframes ring {
+	0%		{ transform: rotate(0deg); }
+	50%		{ transform: rotate(0deg); }
+	55%		{ transform: rotate(4deg); }
+	60%		{ transform: rotate(-4deg); }
+	65%		{ transform: rotate(4deg); }
+	70%		{ transform: rotate(-4deg); }
+	75%		{ transform: rotate(4deg); }
+	80%		{ transform: rotate(0deg); }
+}
+/***/
+
+
+/* Marcas corte y registro */
+#carousel-testimonios {
+	position: relative;
+
+	.carousel-item-inner {
+		min-height: 600px;
+		padding: 160px 0;
+
+		.container {
+			// margin-bottom: 120px;
+		}
+	}
+}
+@media all and (min-height: 700px) {
+	#carousel-testimonios {
+		.carousel-item-inner {
+			min-height: calc(100vh - 100px);
+		}
+	}
+}
+.marcas-corte-registro {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+	span {
+		position: absolute;
+		&:nth-child(1) {
+			top: 20px;
+			left: 20px;
+			transform: rotate(0deg);
+		}
+		&:nth-child(2) {
+			top: 20px;
+			right: 20px;
+			transform: rotate(90deg);
+		}
+		&:nth-child(3) {
+			bottom: 20px;
+			right: 20px;
+			transform: rotate(180deg);
+		}
+		&:nth-child(4) {
+			bottom: 20px;
+			left: 20px;
+			transform: rotate(270deg);
+		}
+		&:nth-child(5) {
+			left: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:nth-child(6) {
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+/***/
+
+/* Slick carousel */
+.slick-next, .slick-prev {
+	z-index: 10;
+
+	&:before {
+		content: "";
+		width: 24px;
+		height: 24px;
+		background-color: transparentize($white, .4);
+		display: block;
+		transform: rotate(-45deg);
+		background: transparent url('../img/marca-corte.svg') center/20px no-repeat !important;
+	}
+	&.slick-prev:before {
+		transform: rotate(-225deg);
+	}
+}
+.text-white, .bg-primary, .wp-block-cover {
+	.slick-next, .slick-prev {
+		&:before {
+			background: transparent url('../img/marca-corte-white.svg') center/20px no-repeat !important;
+		}
+	}
+}
+.galeria-producto {
+	transition: opacity 1s ease;
+	// transition: visibility .3s ease;
+	// display: none;
+	// visibility: hidden;
+	opacity: 0;
+	margin-bottom: 2rem;
+
+	&.slick-initialized {
+		// display: block;
+		opacity: 1;
+		visibility: visible;
+	}
+	.slick-prev {
+		left: 20px;
+	}
+	.slick-next {
+		right: 20px;
+	}
+}
+.galeria-producto-controls {
+	list-style: none;
+	padding-left: 36px;
+
+	li a {
+		position: relative;
+		min-height: 32px;
+		display: block;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: -36px;
+			top: 0;
+			width: 25px;
+			height: 25px;
+			border: 1px solid $secondary;
+			transition: $btn-transition;
+			// background-image: url("data:image/svg+xml,%0A%3Csvg width='25px' height='25px' viewBox='0 0 25 25' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Welcome' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Producto' transform='translate(-89.000000, -1385.000000)' stroke='%23003DA6'%3E%3Crect id='Rectangle' x='89.5' y='1385.5' width='24' height='24'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		}
+
+		&:hover, &.active {
+
+			&:before {
+				// background-image: url("data:image/svg+xml,%0A%3Csvg width='25px' height='25px' viewBox='0 0 25 25' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Welcome' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Producto' transform='translate(-89.000000, -1385.000000)' fill='%23003DA6' stroke='%23003DA6'%3E%3Crect id='Rectangle' x='89.5' y='1385.5' width='24' height='24'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+				background-color: $secondary;
+			}
+		}
+	}
+}
+/***/
+
+/* Bootstrap carousel */
+.gmi-carousel-control {
+	position: absolute;
+	bottom: 80px;
+	left: 0;
+	right: 0;
+
+	a {
+		margin-right: 1rem;
+		opacity: .5;
+		transition: opacity .3s ease;
+
+		&:hover {
+			text-decoration: none;
+			opacity: 1;
+		}
+	}
+
+	.gmi-carousel-control-prev-icon svg {
+		transform: rotate(180deg);
+	}
+}
+/***/
+
+/* Producto */
+.archive .producto {
+	margin-bottom: $spacer * 4;
+
+	h2.entry-title {
+		font-size: $h4-font-size;
+	}
+	.entry-header {
+		.entry-header-inner {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+
+			svg {
+				width: 80px;
+				min-width: 80px;
+				max-width: 80px;
+				height: auto;
+				margin-right: 1rem;
+			}
+		}
+		svg, path {
+			fill: $secondary;
+		}
+	}
+	.wp-post-image {
+		margin-bottom: $spacer * 2;
+	}
+	.entry-content {
+		font-size: $font-size-sm;
+		height: 150px;
+	    overflow: hidden;
+	    overflow-y: auto;
+	}
+	.entry-meta {
+		font-weight: $font-weight-bold;
+		color: $secondary;
+	}
+	.entry-footer {
+		border-top: 1px solid $secondary;
+		padding-top: 1rem;
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		svg {
+			margin-left: .5rem;
+			max-height: 40px;
+			width: auto;
+		}
+		a {
+			font-weight: $font-weight-bold;
+		}
+	}
+}
+.mas-info-productos {
+	padding: $spacer * 5;
+	background-image: url('../img/marca-registro-white.svg');
+	background-repeat: no-repeat;
+	background-position: right .5rem center;
+	background-size: 2rem;
+
+	.svg-emoji {
+		margin-bottom: 1.5rem;
+	}
+	.widget-title {
+		font-size: $h2-font-size;
+	}
+}
+/***/
+
+/* Blog */
+.single {
+
+	article {
+
+		img:first-child {
+			margin-bottom: 2rem;
+		}
+	}
+	.dots-content-footer {
+		text-align: right;
+		svg {
+			transform: rotate(180deg);
+		}
+		path {
+			fill: $secondary;
+			// transform: rotate(90deg);
+		}
+	}
+}
+body:not(.single-post) {
+	.entry-meta {
+		font-weight: $font-weight-bold;
+		color: $secondary;
+	}
+}
+/***/
+
+
+/* FAQs */
+.schema-faq .schema-faq-section {
+    margin-bottom: -1px;
+    border-left: 0;
+    border-right: 0;
+
+	.schema-faq-question.faq-q-open,
+	p.schema-faq-answer {
+		border-bottom: 0;
+	}
+}
+

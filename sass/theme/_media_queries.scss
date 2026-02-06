@@ -1,0 +1,68 @@
+@include media-breakpoint-down(xs) {
+	#wrapper-navbar {
+		.navbar-menu-group {
+			.telefono {
+				font-size: $font-size-base;
+				margin-right: .8rem;
+				padding-right: .8rem;
+
+				.img-telefono {
+					margin-right: .5rem !important;
+
+					svg {
+						height: 25px;
+						width: 15px;
+					}
+				}
+			}
+		}
+		.navbar-logo-group {
+
+			.navbar-brand {
+				margin-right: .5rem;
+			
+				.img-fluid {
+					margin-top: 8px;
+					max-width: 60px;
+				}
+			}
+		}
+	}
+}
+@include media-breakpoint-up(sm) {
+
+}
+@include media-breakpoint-up(md) {
+	#wrapper-navbar {
+		.navbar-logo-group {
+			.dots-navbar {
+				margin-right: 0;
+			}
+		}
+	}
+	#wrapper-footer {
+		.widget_nav_menu {
+			.menu {
+				justify-content: flex-end;
+
+			}
+		}
+		.marca-registro {
+			margin-top: -80px;
+		}
+	}
+	#menu-principal {
+		.modal-content {
+			padding: 100px 0 2rem;
+		}
+	}
+	.footer-widget {
+		text-align: left;
+	}
+	.carousel .testimonio {
+		.carousel-item-inner {
+			background-position: right top;
+		}
+	}
+
+}
