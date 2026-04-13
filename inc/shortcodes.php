@@ -262,17 +262,25 @@ add_shortcode( 'testimonios', 'testimonios' );
 
 function get_telefono() {
 
+	$r = '';
+
 	$telefono = get_theme_mod( 'telefono', false );
 	if ( $telefono ) {
 		$telefono_link = str_replace(' ', '', $telefono);
 		$telefono_link = 'tel:0034' . $telefono_link;
 
 
-		return '<a class="telefono" href="'.$telefono_link.'"><span class="img-telefono mr-3">'.get_svg_phone().'</span>'.$telefono.'</a>';
+		$r .= '<a class="telefono" href="'.$telefono_link.'" target="_blank" rel="noopener noreferrer"><span class="img-telefono mr-3">'.get_svg_phone().'</span>'.$telefono.'</a>';
 
 	}
 
-	return false;
+	$email = get_theme_mod( 'email', false );
+	if ( $email ) {
+		$email_link = 'mailto:' . $email;
+		$r .= '<a class="email" href="'.$email_link.'" target="_blank" rel="noopener noreferrer"><span class="img-email mr-3">'.get_svg_email().'</span>'.$email.'</a>';
+	}
+
+	return $r;
 
 }
 add_shortcode('telefono', 'get_telefono');

@@ -56,6 +56,13 @@ function sumun_new_customizer_settings($wp_customize) {
         'section'   => 'sumun_ajustes',
     ) );
 
+    $wp_customize->add_setting('email');
+    $wp_customize->add_control( 'email',   array(
+        'type'      => 'text',
+        'label'     => 'Email',
+        'section'   => 'sumun_ajustes',
+    ) );
+
     $wp_customize->add_setting('formulario_testimonios');
     $wp_customize->add_control( 'formulario_testimonios',   array(
         'type'      => 'text',
