@@ -285,13 +285,20 @@ path {
 			border-right: 1px solid;
 
 			.menu-icon svg {
-				height: 40px;
-				width: 24px;
-				animation-name: ring;
-				animation-duration: 2s;
 			}
 		}
+
+		.menu-contacto {
+			align-items: flex-end;
+		}
 	}
+}
+
+.menu-icon svg {
+	height: 40px;
+	width: 24px;
+	animation-name: ring;
+	animation-duration: 2s;
 }
 body.scrolled:not(.menu-abierto) #wrapper-navbar {
 	background-color: $primary;

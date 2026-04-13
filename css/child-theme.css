@@ -12178,13 +12178,18 @@ path {
       margin-right: 1.5rem;
       padding-right: 1.5rem;
       border-right: 1px solid; }
-      #wrapper-navbar .navbar-menu-group .menu-link .menu-icon svg {
-        height: 40px;
-        width: 24px;
-        -webkit-animation-name: ring;
-                animation-name: ring;
-        -webkit-animation-duration: 2s;
-                animation-duration: 2s; }
+    #wrapper-navbar .navbar-menu-group .menu-contacto {
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+
+.menu-icon svg {
+  height: 40px;
+  width: 24px;
+  -webkit-animation-name: ring;
+          animation-name: ring;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s; }
 
 body.scrolled:not(.menu-abierto) #wrapper-navbar {
   background-color: #002AFF;

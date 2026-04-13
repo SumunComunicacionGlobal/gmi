@@ -280,7 +280,7 @@ function get_telefono() {
 		$r .= '<a class="menu-link email" href="'.$email_link.'" target="_blank" rel="noopener noreferrer"><span class="menu-icon img-email mr-3">'.get_svg_email().'</span>'.$email.'</a>';
 	}
 
-	return '<div class="d-flex flex-column flex-lg-row justify-content-end align-items-end gap-1">' . $r . '</div>';
+	return '<div class="menu-contacto d-flex flex-column flex-wrap flex-lg-row gap-1">' . $r . '</div>';
 
 }
 add_shortcode('telefono', 'get_telefono');
