@@ -1,12 +1,12 @@
 @include media-breakpoint-down(xs) {
 	#wrapper-navbar {
 		.navbar-menu-group {
-			.telefono {
+			.menu-link {
 				font-size: $font-size-base;
 				margin-right: .8rem;
 				padding-right: .8rem;
 
-				.img-telefono {
+				.menu-icon {
 					margin-right: .5rem !important;
 
 					svg {

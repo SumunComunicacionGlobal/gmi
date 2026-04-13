@@ -270,17 +270,17 @@ function get_telefono() {
 		$telefono_link = 'tel:0034' . $telefono_link;
 
 
-		$r .= '<a class="telefono" href="'.$telefono_link.'" target="_blank" rel="noopener noreferrer"><span class="img-telefono mr-3">'.get_svg_phone().'</span>'.$telefono.'</a>';
+		$r .= '<a class="menu-link telefono" href="'.$telefono_link.'" target="_blank" rel="noopener noreferrer"><span class="menu-icon img-telefono mr-3">'.get_svg_phone().'</span>'.$telefono.'</a>';
 
 	}
 
 	$email = get_theme_mod( 'email', false );
 	if ( $email ) {
 		$email_link = 'mailto:' . $email;
-		$r .= '<a class="email" href="'.$email_link.'" target="_blank" rel="noopener noreferrer"><span class="img-email mr-3">'.get_svg_email().'</span>'.$email.'</a>';
+		$r .= '<a class="menu-link email" href="'.$email_link.'" target="_blank" rel="noopener noreferrer"><span class="menu-icon img-email mr-3">'.get_svg_email().'</span>'.$email.'</a>';
 	}
 
-	return $r;
+	return '<div class="d-flex flex-column flex-lg-row justify-content-end align-items-end gap-1">' . $r . '</div>';
 
 }
 add_shortcode('telefono', 'get_telefono');
@@ -293,6 +293,7 @@ function carrusel_sectores( $atts ) {
 			'taxonomy' => 'sector',
 			'carrusel' => true,
 			'page_id'	=> 26,
+			'excluir'	=> '',
 		), $atts )
 	);
 
@@ -304,6 +305,7 @@ function carrusel_sectores( $atts ) {
 			'posts_per_page'	=> -1,
 			'orderby'			=> 'menu_order',
 			'order'				=> 'ASC',
+			'post__not_in'		=> explode(',', $excluir)
 		) );
 
 	} else {

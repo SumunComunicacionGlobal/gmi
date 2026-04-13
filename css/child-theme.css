@@ -12081,13 +12081,13 @@ a.read-more, .taxonomy-description a, p.read-more a {
         -ms-flex-align: center;
             align-items: center; }
 
-.telefono {
+.menu-link {
   height: 40px;
   line-height: 40px;
   font-weight: 700;
   font-size: 1.2rem; }
 
-.img-telefono svg, .img-telefono path {
+.menu-icon svg, .menu-icon path {
   fill: #003DA6; }
 
 .text-white svg, .text-white path, #wrapper-navbar svg, #wrapper-navbar path, #wrapper-footer-full svg, #wrapper-footer-full path, #wrapper-footer svg, #wrapper-footer path {
@@ -12173,12 +12173,12 @@ path {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    #wrapper-navbar .navbar-menu-group .telefono {
+    #wrapper-navbar .navbar-menu-group .menu-link {
       color: #fff;
       margin-right: 1.5rem;
       padding-right: 1.5rem;
       border-right: 1px solid; }
-      #wrapper-navbar .navbar-menu-group .telefono .img-telefono svg {
+      #wrapper-navbar .navbar-menu-group .menu-link .menu-icon svg {
         height: 40px;
         width: 24px;
         -webkit-animation-name: ring;
@@ -12693,13 +12693,13 @@ body:not(.single-post) .entry-meta {
     border-bottom: 0; }
 
 @media (max-width: 599.98px) {
-  #wrapper-navbar .navbar-menu-group .telefono {
+  #wrapper-navbar .navbar-menu-group .menu-link {
     font-size: 1rem;
     margin-right: .8rem;
     padding-right: .8rem; }
-    #wrapper-navbar .navbar-menu-group .telefono .img-telefono {
+    #wrapper-navbar .navbar-menu-group .menu-link .menu-icon {
       margin-right: .5rem !important; }
-      #wrapper-navbar .navbar-menu-group .telefono .img-telefono svg {
+      #wrapper-navbar .navbar-menu-group .menu-link .menu-icon svg {
         height: 25px;
         width: 15px; }
   #wrapper-navbar .navbar-logo-group .navbar-brand {

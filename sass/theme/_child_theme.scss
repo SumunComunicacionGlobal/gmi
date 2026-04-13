@@ -155,13 +155,13 @@ a.read-more, .taxonomy-description a, p.read-more a {
 		align-items: center;
 	}
 }
-.telefono {
+.menu-link {
 	height: 40px;
 	line-height: 40px;
 	font-weight: $font-weight-bold;
 	font-size: 1.2rem;
 }
-.img-telefono {
+.menu-icon {
 	svg, path {
 		fill: $secondary;
 	}
@@ -278,13 +278,13 @@ path {
 		display: flex;
 		align-items: center;
 
-		.telefono {
+		.menu-link {
 			color: $white;
 			margin-right: 1.5rem;
 			padding-right: 1.5rem;
 			border-right: 1px solid;
 
-			.img-telefono svg {
+			.menu-icon svg {
 				height: 40px;
 				width: 24px;
 				animation-name: ring;
