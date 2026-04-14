@@ -12717,7 +12717,7 @@ body:not(.single-post) .entry-meta {
         height: 20px;
         width: 15px; }
     #wrapper-navbar .navbar-menu-group .menu-link.email {
-      font-size: 0.875rem;
+      font-size: .75rem;
       font-weight: 400; }
       #wrapper-navbar .navbar-menu-group .menu-link.email svg {
         display: none; }
