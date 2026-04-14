@@ -78,6 +78,7 @@ foreach ( $sumun_includes as $file ) {
 function sumun_after_setup_theme(){
     add_theme_support( 'align-full' );
     add_theme_support( 'align-wide' );
+    add_theme_support( 'appearance-tools' );
 
     register_nav_menus( array(
         // 'legal' => __( 'Páginas legales', 'sumun-admin' ),
@@ -86,6 +87,8 @@ function sumun_after_setup_theme(){
     ) );
 }
 add_action( 'after_setup_theme', 'sumun_after_setup_theme' );
+
+
 
 
 function understrap_remove_scripts() {
