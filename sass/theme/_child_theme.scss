@@ -267,6 +267,11 @@ path {
 			svg {
 				width: 75px;
 				height: 75px;
+
+				@include media-breakpoint-down(xs) {
+					width: 55px;
+					height: 55px;
+				}
 			}
 		}
 		.img-fluid {

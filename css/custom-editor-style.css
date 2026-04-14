@@ -12165,6 +12165,10 @@ path {
     #wrapper-navbar .navbar-logo-group .dots-navbar svg {
       width: 75px;
       height: 75px; }
+      @media (max-width: 599.98px) {
+        #wrapper-navbar .navbar-logo-group .dots-navbar svg {
+          width: 55px;
+          height: 55px; } }
   #wrapper-navbar .navbar-logo-group .img-fluid {
     margin-top: 24px; }
   #wrapper-navbar .navbar-menu-group {
@@ -12700,14 +12704,21 @@ body:not(.single-post) .entry-meta {
 
 @media (max-width: 599.98px) {
   #wrapper-navbar .navbar-menu-group .menu-link {
+    height: 24px;
+    line-height: 24px;
     font-size: 1rem;
     margin-right: .8rem;
     padding-right: .8rem; }
     #wrapper-navbar .navbar-menu-group .menu-link .menu-icon {
       margin-right: .5rem !important; }
       #wrapper-navbar .navbar-menu-group .menu-link .menu-icon svg {
-        height: 25px;
+        height: 20px;
         width: 15px; }
+    #wrapper-navbar .navbar-menu-group .menu-link.email {
+      font-size: 0.875rem;
+      font-weight: 400; }
+      #wrapper-navbar .navbar-menu-group .menu-link.email svg {
+        display: none; }
   #wrapper-navbar .navbar-logo-group .navbar-brand {
     margin-right: .5rem; }
     #wrapper-navbar .navbar-logo-group .navbar-brand .img-fluid {
