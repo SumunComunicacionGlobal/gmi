@@ -12237,6 +12237,9 @@ body.menu-abierto #wrapper-navbar {
   position: relative;
   z-index: 10000;
   outline: 0; }
+  @media (max-width: 599.98px) {
+    .navbar-toggler {
+      width: 40px; } }
   .navbar-toggler .slot {
     position: absolute;
     left: 0;

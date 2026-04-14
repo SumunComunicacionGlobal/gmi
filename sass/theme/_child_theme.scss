@@ -359,6 +359,10 @@ body {
 	z-index: 10000;
 	outline: 0;
 
+	@include media-breakpoint-down(xs) {
+		width: 40px;
+	}
+
 	.slot {
 		position: absolute;
 		left: 0;
