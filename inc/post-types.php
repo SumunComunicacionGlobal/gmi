@@ -275,7 +275,7 @@ function custom_taxonomy_tipo() {
 											'with_front'	=> false,
 										),
 	);
-	register_taxonomy( 'tipo', array( 'producto' ), $args );
+	register_taxonomy( 'tipo', array( 'producto', 'page' ), $args );
 
 }
 add_action( 'init', 'custom_taxonomy_tipo', 10 );
@@ -319,7 +319,7 @@ function custom_taxonomy_sector() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'sector', array( 'producto' ), $args );
+	register_taxonomy( 'sector', array( 'producto', 'page' ), $args );
 
 }
 add_action( 'init', 'custom_taxonomy_sector', 10 );

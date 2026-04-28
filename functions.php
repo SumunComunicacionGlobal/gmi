@@ -239,6 +239,11 @@ function sumun_pre_get_posts($query) {
     if (is_search() || is_tax('tipo') || is_tax('sector') ) {
         $query->set('posts_per_page', 30);
     }
+
+    // Mostrar también las páginas en los archivos de taxonomía 'tipo' y 'sector'
+    if ( ( is_tax('tipo') || is_tax('sector') ) && !is_admin() ) {
+        $query->set('post_type', array('producto', 'page'));
+    }
 }
 
 function menu_toggler() {

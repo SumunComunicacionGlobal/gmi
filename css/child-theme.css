@@ -12615,11 +12615,14 @@ body.menu-abierto #wrapper-navbar {
 
 /***/
 /* Producto */
-.archive .producto {
+.archive .producto,
+.archive .page {
   margin-bottom: 4rem; }
-  .archive .producto h2.entry-title {
+  .archive .producto h2.entry-title,
+  .archive .page h2.entry-title {
     font-size: 1.3rem; }
-  .archive .producto .entry-header .entry-header-inner {
+  .archive .producto .entry-header .entry-header-inner,
+  .archive .page .entry-header .entry-header-inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12628,25 +12631,32 @@ body.menu-abierto #wrapper-navbar {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .archive .producto .entry-header .entry-header-inner svg {
+    .archive .producto .entry-header .entry-header-inner svg,
+    .archive .page .entry-header .entry-header-inner svg {
       width: 80px;
       min-width: 80px;
       max-width: 80px;
       height: auto;
       margin-right: 1rem; }
-  .archive .producto .entry-header svg, .archive .producto .entry-header path {
+  .archive .producto .entry-header svg, .archive .producto .entry-header path,
+  .archive .page .entry-header svg,
+  .archive .page .entry-header path {
     fill: #003DA6; }
-  .archive .producto .wp-post-image {
+  .archive .producto .wp-post-image,
+  .archive .page .wp-post-image {
     margin-bottom: 2rem; }
-  .archive .producto .entry-content {
+  .archive .producto .entry-content,
+  .archive .page .entry-content {
     font-size: 0.875rem;
     height: 150px;
     overflow: hidden;
     overflow-y: auto; }
-  .archive .producto .entry-meta {
+  .archive .producto .entry-meta,
+  .archive .page .entry-meta {
     font-weight: 700;
     color: #003DA6; }
-  .archive .producto .entry-footer {
+  .archive .producto .entry-footer,
+  .archive .page .entry-footer {
     border-top: 1px solid #003DA6;
     padding-top: 1rem;
     margin-top: 1rem;
@@ -12659,11 +12669,13 @@ body.menu-abierto #wrapper-navbar {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .archive .producto .entry-footer svg {
+    .archive .producto .entry-footer svg,
+    .archive .page .entry-footer svg {
       margin-left: .5rem;
       max-height: 40px;
       width: auto; }
-    .archive .producto .entry-footer a {
+    .archive .producto .entry-footer a,
+    .archive .page .entry-footer a {
       font-weight: 700; }
 
 .mas-info-productos {

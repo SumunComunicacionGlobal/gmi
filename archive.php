@@ -14,6 +14,9 @@ get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
 $post_type = get_post_type();
+if ( 'page' == $post_type ) {
+	$post_type = 'producto';
+}
 ?>
 
 <div class="wrapper" id="archive-wrapper">
