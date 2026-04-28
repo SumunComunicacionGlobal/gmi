@@ -746,6 +746,12 @@ body {
 	.slick-next {
 		right: 20px;
 	}
+
+	img {
+		aspect-ratio: 3/2;
+		object-fit: contain;
+		border-bottom: $border-width solid $light;
+	}
 }
 .galeria-producto-controls {
 	list-style: none;
