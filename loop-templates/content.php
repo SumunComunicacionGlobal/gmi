@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<?php
 				the_title(
-					sprintf( '<h2 class="entry-title h3"><a class="stretched-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					sprintf( '<h2 class="entry-title h4"><a class="stretched-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 					'</a></h2>'
 				);
 				?>

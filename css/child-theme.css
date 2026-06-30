@@ -11654,7 +11654,10 @@ hr {
   padding: .8rem; }
 
 .pagination {
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .comments-area {
   margin-top: 3rem; }
@@ -12108,7 +12111,7 @@ a.read-more, .taxonomy-description a, p.read-more a {
 .page-template-frontpage #full-width-page-wrapper {
   padding-top: 0; }
 
-.dots, .dots svg {
+.dots:not(.page-link), .dots:not(.page-link) svg {
   width: 74px;
   height: 74px; }
 

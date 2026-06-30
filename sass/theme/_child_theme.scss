@@ -192,7 +192,7 @@ a.read-more, .taxonomy-description a, p.read-more a {
 .page-template-frontpage #full-width-page-wrapper {
 	padding-top: 0;
 }
-.dots, .dots svg {
+.dots:not(.page-link), .dots:not(.page-link) svg {
 	width: 74px;
 	height: 74px;
 }
