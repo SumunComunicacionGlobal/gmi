@@ -9,27 +9,23 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class('mb-5'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( 'mb-5 col-md-6 col-lg-4' ); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="row">
+	<div class="card h-100 position-relative rounded-lg">
 
-		<div class="col-sm-4 mb-3">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+				<?php echo get_the_post_thumbnail( $post->ID, 'medium', array( 'class' => 'card-img-top' ) ); ?>
+			</a>
+		<?php endif; ?>
 
-			<div class="is-style-rounded">
-
-				<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
-
-			</div>
-
-		</div>
-
-		<div class="col-sm-8 mb-3">
+		<div class="card-body">
 
 			<header class="entry-header">
 
 				<?php
 				the_title(
-					sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					sprintf( '<h2 class="entry-title h3"><a class="stretched-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 					'</a></h2>'
 				);
 				?>
@@ -44,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 
 			</header><!-- .entry-header -->
 
-			<div class="entry-content">
+			<div class="entry-content card-text">
 
 				<?php the_excerpt(); ?>
 

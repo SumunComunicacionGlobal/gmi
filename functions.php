@@ -149,7 +149,7 @@ function es_blog() {
 add_filter( 'theme_mod_understrap_sidebar_position', 'cargar_sidebar');
 function cargar_sidebar( $valor ) {
     global $wp_query;
-    if ( es_blog() ) {
+    if ( is_singular( 'post' ) ) {
         $valor = 'right';
     }
     return $valor;
@@ -160,7 +160,7 @@ function understrap_all_excerpts_get_more_link( $post_excerpt ) {
         global $post;
         if ('' != $post_excerpt) $post_excerpt .= '...';
         // $post_excerpt .= '<p><a class="read-more" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Leer más', 'sumun' ) . '</a></p>';
-        $post_excerpt .= '<p class="mt-4"><a class="btn btn-cut btn-outline-primary" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Leer más', 'sumun' ) . '</a></p>';
+        // $post_excerpt .= '<p class="mt-4"><a class="btn btn-cut btn-outline-primary" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Leer más', 'sumun' ) . '</a></p>';
     }
     return $post_excerpt;
 }
