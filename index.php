@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php
 				$page_for_posts_id = (int) get_option( 'page_for_posts' );
 
-				if ( is_home() && $page_for_posts_id > 0 ) {
+				if ( is_home() && ! is_paged() && $page_for_posts_id > 0 ) {
 					$page_for_posts = get_post( $page_for_posts_id );
 
 					if ( $page_for_posts instanceof WP_Post ) {
