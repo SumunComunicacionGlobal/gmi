@@ -37,6 +37,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php
+				$page_for_posts_id = (int) get_option( 'page_for_posts' );
+
+				if ( is_home() && $page_for_posts_id > 0 ) {
+					$page_for_posts = get_post( $page_for_posts_id );
+
+					if ( $page_for_posts instanceof WP_Post ) {
+
+						if ( ! empty( $page_for_posts->post_content ) ) {
+							echo '<div class="page-content">' . apply_filters( 'the_content', $page_for_posts->post_content ) . '</div>';
+						}
+
+					}
+				}
+				?>
+
+				<?php
 				if ( have_posts() ) {
 					echo '<div class="row">';
 					// Start the Loop.
