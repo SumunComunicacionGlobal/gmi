@@ -54,7 +54,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php
 				if ( have_posts() ) {
-					echo '<div class="row">';
+					echo '<div class="row mt-3">';
 					// Start the Loop.
 					while ( have_posts() ) {
 						the_post();
