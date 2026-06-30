@@ -4,15 +4,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $content_width = 1140;
-add_theme_support('editor-styles');
 add_filter( 'widget_text', 'do_shortcode');
 add_filter( 'wpcf7_form_elements', 'do_shortcode' );
-function understrap_wpdocs_theme_add_editor_styles() {
-    add_editor_style( 'css/custom-editor-style.css' );
-}
 
-add_action( 'after_setup_theme', 'editor_color_palette' );
-function editor_color_palette() {
+add_action( 'after_setup_theme', 'sumun_editor_setup', 20 );
+function sumun_editor_setup() {
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'css/custom-editor-style.css' );
+
+    // Ensure child theme palette overrides parent palette settings.
+    remove_theme_support( 'editor-color-palette' );
+
     add_theme_support( 'editor-color-palette', array(
             array(
                 'name'  => __( 'Primary #002AFF', 'sumun-admin' ),
