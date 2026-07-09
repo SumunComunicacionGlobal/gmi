@@ -12728,6 +12728,23 @@ body:not(.single-post) .entry-meta {
 .card {
   overflow: hidden; }
 
+.telefono-header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%; }
+  .telefono-header-wrapper .horario-atencion-header {
+    font-size: 0.8rem;
+    line-height: .3;
+    font-weight: 400;
+    text-align: right; }
+
 @media (max-width: 599.98px) {
   #wrapper-navbar .navbar-menu-group .menu-link {
     height: 24px;

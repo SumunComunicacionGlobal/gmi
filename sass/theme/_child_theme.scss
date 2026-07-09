@@ -926,3 +926,18 @@ body:not(.single-post) {
 .card {
 	overflow: hidden;
 }
+
+.telefono-header-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	.horario-atencion-header {
+		font-size: 0.8rem;
+		line-height: .3;
+		font-weight: 400;
+		text-align: right;
+	}
+
+}

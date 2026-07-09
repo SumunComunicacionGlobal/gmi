@@ -266,11 +266,12 @@ function get_telefono() {
 
 	$telefono = get_theme_mod( 'telefono', false );
 	if ( $telefono ) {
+		$horario_atencion = get_theme_mod( 'horario_atencion', 'De 7h a 15h' );
 		$telefono_link = str_replace(' ', '', $telefono);
 		$telefono_link = 'tel:0034' . $telefono_link;
 
 
-		$r .= '<a class="menu-link telefono" href="'.$telefono_link.'" target="_blank" rel="noopener noreferrer"><span class="menu-icon img-telefono mr-3">'.get_svg_phone().'</span>'.$telefono.'</a>';
+		$r .= '<a class="menu-link telefono" href="'.$telefono_link.'" target="_blank" rel="noopener noreferrer"><div class="telefono-header-wrapper"><div class="menu-icon img-telefono mr-3">'.get_svg_phone().'</div><div><div class="telefono-header">'.$telefono.'</div><div class="horario-atencion-header">'.$horario_atencion.'</div></div></div></a>';
 
 	}
 

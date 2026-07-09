@@ -56,6 +56,13 @@ function sumun_new_customizer_settings($wp_customize) {
         'section'   => 'sumun_ajustes',
     ) );
 
+    $wp_customize->add_setting('horario_atencion');
+    $wp_customize->add_control( 'horario_atencion',   array(
+        'type'      => 'text',
+        'label'     => 'Horario de atención',
+        'section'   => 'sumun_ajustes',
+    ) );
+
     $wp_customize->add_setting('email');
     $wp_customize->add_control( 'email',   array(
         'type'      => 'text',
