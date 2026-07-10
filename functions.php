@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $content_width = 1140;
 add_filter( 'widget_text', 'do_shortcode');
 add_filter( 'wpcf7_form_elements', 'do_shortcode' );
+add_filter( 'option_image_default_link_type', fn () => 'file' );
 
 add_action( 'after_setup_theme', 'sumun_editor_setup', 20 );
 function sumun_editor_setup() {
@@ -81,6 +82,8 @@ function sumun_after_setup_theme(){
     add_theme_support( 'align-full' );
     add_theme_support( 'align-wide' );
     add_theme_support( 'appearance-tools' );
+    add_theme_support( 'custom-spacing' );
+    add_theme_support( 'custom-units' );
 
     register_nav_menus( array(
         // 'legal' => __( 'Páginas legales', 'sumun-admin' ),
@@ -368,17 +371,19 @@ function smn_generate_gallery_block_from_ids( $img_ids ) {
         return false;
     }
 
-    // Generar el HTML del bloque galería con lightbox
-    $gallery_html = '<!-- wp:gallery {"linkTo":"lightbox"} -->';
+    // Generar el HTML del bloque galería con enlace al archivo de imagen
+    $gallery_html = '<!-- wp:gallery {"linkTo":"media"} -->';
     $gallery_html .= '<figure class="wp-block-gallery has-nested-images columns-default is-cropped">';
 
     foreach ($img_ids as $img_id) {
         $img_url = wp_get_attachment_image_url($img_id, 'large');
         $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
         
-        $gallery_html .= '<!-- wp:image {"lightbox":{"enabled":true},"id":' . $img_id . ',"sizeSlug":"large","linkDestination":"none"} -->';
+        $gallery_html .= '<!-- wp:image {"id":' . $img_id . ',"sizeSlug":"large","linkDestination":"media","linkTo":"media","lightbox":{"enabled":false}} -->';
         $gallery_html .= '<figure class="wp-block-image size-large">';
+        $gallery_html .= '<a href="' . esc_url($img_url) . '">';
         $gallery_html .= '<img src="' . esc_url($img_url) . '" alt="' . esc_attr($img_alt) . '" class="wp-image-' . $img_id . '"/>';
+        $gallery_html .= '</a>';
         $gallery_html .= '</figure>';
         $gallery_html .= '<!-- /wp:image -->';
     }
