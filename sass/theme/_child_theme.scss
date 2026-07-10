@@ -929,6 +929,10 @@ body:not(.single-post) {
 
 .card {
 	overflow: hidden;
+	background-image: url(../img/marca-registro.svg),url(../img/marca-registro.svg);
+	background-size: 1.5rem;
+	background-repeat: no-repeat;
+	background-position: top 50% left 4px, top 50% right 4px;
 }
 
 .is-style-card {
