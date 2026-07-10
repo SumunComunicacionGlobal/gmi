@@ -4877,7 +4877,7 @@ input[type="button"].btn-block {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 1.75rem; }
+  padding: 2rem; }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -4893,10 +4893,10 @@ input[type="button"].btn-block {
   text-decoration: none; }
 
 .card-link + .card-link {
-  margin-left: 1.75rem; }
+  margin-left: 2rem; }
 
 .card-header {
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 2rem;
   margin-bottom: 0;
   background-color: rgba(1, 1, 1, 0.03);
   border-bottom: 1px solid rgba(1, 1, 1, 0.125); }
@@ -4904,19 +4904,19 @@ input[type="button"].btn-block {
     border-top: 0; }
 
 .card-footer {
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 2rem;
   background-color: rgba(1, 1, 1, 0.03);
   border-top: 1px solid rgba(1, 1, 1, 0.125); }
 
 .card-header-tabs {
-  margin-right: -0.875rem;
+  margin-right: -1rem;
   margin-bottom: -0.75rem;
-  margin-left: -0.875rem;
+  margin-left: -1rem;
   border-bottom: 0; }
 
 .card-header-pills {
-  margin-right: -0.875rem;
-  margin-left: -0.875rem; }
+  margin-right: -1rem;
+  margin-left: -1rem; }
 
 .card-img-overlay {
   position: absolute;
@@ -12734,7 +12734,7 @@ body:not(.single-post) .entry-meta {
   background-image: url(../img/marca-registro.svg), url(../img/marca-registro.svg);
   background-size: 1.5rem;
   background-repeat: no-repeat;
-  background-position: top 50% left 4px, top 50% right 4px; }
+  background-position: top 4px left 4px, bottom 4px right 4px; }
 
 .telefono-header-wrapper {
   display: -webkit-box;
