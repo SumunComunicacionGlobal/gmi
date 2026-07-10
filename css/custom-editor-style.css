@@ -11944,10 +11944,14 @@ label {
   padding-right: 3rem;
   padding-left: 3rem; }
 
-.btn-plus {
+.btn-plus,
+.wp-block-button.is-style-btn-plus .wp-block-button__link {
   padding-left: 1rem;
-  padding-right: 5rem; }
-  .btn-plus:after {
+  padding-right: 5rem;
+  background-color: transparent;
+  border-radius: 0; }
+  .btn-plus:after,
+  .wp-block-button.is-style-btn-plus .wp-block-button__link:after {
     content: url("../img/mas.svg");
     position: absolute;
     right: 10px;

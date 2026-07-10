@@ -32,13 +32,13 @@ function sumun_register_group_block_styles() {
             )
         );
 
-        register_block_style(
-            'core/button',
-            array(
-                'name'  => 'btn-plus',
-                'label' => __( 'Btn Plus', 'sumun-admin' ),
-            )
-        );
+        // register_block_style(
+        //     'core/button',
+        //     array(
+        //         'name'  => 'btn-plus',
+        //         'label' => __( 'Btn Plus', 'sumun-admin' ),
+        //     )
+        // );
 
     }
 }

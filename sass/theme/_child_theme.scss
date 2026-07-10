@@ -4,9 +4,12 @@
 	padding-right: $input-btn-padding-x * 3;
 	padding-left: $input-btn-padding-x * 3;
 }
-.btn-plus {
+.btn-plus,
+.wp-block-button.is-style-btn-plus .wp-block-button__link {
 	padding-left: $input-btn-padding-x;
 	padding-right: $input-btn-padding-x * 5;
+	background-color: transparent;
+	border-radius: 0;
 
 	&:after {
 		content: url('../img/mas.svg');
@@ -15,6 +18,8 @@
 		top: 50%;
 		transform: translateY(-50%);
 	}
+
+	.marcas
 }
 .redes-sociales {
 	justify-content: flex-start;
@@ -926,6 +931,12 @@ body:not(.single-post) {
 .card {
 	overflow: hidden;
 }
+
+.is-style-card {
+	@extend .card;
+	@extend .card-body;
+}
+
 
 .telefono-header-wrapper {
 	display: flex;
