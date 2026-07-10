@@ -11939,6 +11939,14 @@ label {
     top: 32px; } }
 
 /* General */
+:root :where(.wp-element-button, .wp-block-button__link) {
+  background-color: #002AFF; }
+  :root :where(.wp-element-button, .wp-block-button__link):hover {
+    text-decoration: none;
+    background-color: #003DA6; }
+  :root :where(.wp-element-button, .wp-block-button__link):not(.has-text-color):hover {
+    color: #fff; }
+
 .is-style-outline .wp-block-button__link {
   border-width: 4px;
   padding-right: 3rem;
@@ -12731,6 +12739,7 @@ body:not(.single-post) .entry-meta {
 
 .card, .is-style-card {
   overflow: hidden;
+  border-radius: 1rem;
   background-image: url(../img/marca-registro.svg), url(../img/marca-registro.svg);
   background-size: 1.5rem;
   background-repeat: no-repeat;

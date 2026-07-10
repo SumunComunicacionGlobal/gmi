@@ -1,4 +1,17 @@
 /* General */
+:root :where(.wp-element-button, .wp-block-button__link) {
+	background-color: $primary;
+
+	&:hover {
+		text-decoration: none;
+		background-color: $secondary;
+	}
+
+	&:not(.has-text-color):hover {
+		color: $white;
+	}
+}
+
 .is-style-outline .wp-block-button__link {
 	border-width: 4px;
 	padding-right: $input-btn-padding-x * 3;
@@ -929,6 +942,7 @@ body:not(.single-post) {
 
 .card {
 	overflow: hidden;
+	border-radius: $border-radius-lg;
 	background-image: url(../img/marca-registro.svg),url(../img/marca-registro.svg);
 	background-size: 1.5rem;
 	background-repeat: no-repeat;
