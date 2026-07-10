@@ -21,6 +21,28 @@ function sumun_nocookie_youtube_block( $block_content, $block ) {
  
 add_filter( 'render_block', 'sumun_nocookie_youtube_block', 10, 2 );
 
+add_action( 'init', 'sumun_register_group_block_styles' );
+function sumun_register_group_block_styles() {
+    if ( function_exists( 'register_block_style' ) ) {
+        register_block_style(
+            'core/group',
+            array(
+                'name'  => 'card',
+                'label' => __( 'Card', 'sumun-admin' ),
+            )
+        );
+
+        register_block_style(
+            'core/button',
+            array(
+                'name'  => 'btn-plus',
+                'label' => __( 'Btn Plus', 'sumun-admin' ),
+            )
+        );
+
+    }
+}
+
 add_action('acf/init', 'sumun_init_block_types');
 function sumun_init_block_types() {
 

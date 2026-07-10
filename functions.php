@@ -63,7 +63,7 @@ $sumun_includes = array(
     '/customizer-sumun.php',
     // '/gdpr-cookies.php',
     '/widgets-sumun.php',
-    // '/blocks-sumun.php',
+    '/blocks-sumun.php',
     // '/dummy-content.php',
     '/svg-sumun.php',
     '/seo.php',
