@@ -4855,7 +4855,7 @@ input[type="button"].btn-block {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #fff; }
 
-.card {
+.card, .is-style-card {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4869,11 +4869,11 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(1, 1, 1, 0.125); }
-  .card > hr {
+  .card > hr, .is-style-card > hr {
     margin-right: 0;
     margin-left: 0; }
 
-.card-body {
+.card-body, .is-style-card {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -4943,7 +4943,7 @@ input[type="button"].btn-block {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .card-deck .card {
+  .card-deck .card, .card-deck .is-style-card {
     margin-bottom: 15px; }
   @media (min-width: 600px) {
     .card-deck {
@@ -4953,7 +4953,7 @@ input[type="button"].btn-block {
               flex-flow: row wrap;
       margin-right: -15px;
       margin-left: -15px; }
-      .card-deck .card {
+      .card-deck .card, .card-deck .is-style-card {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -4976,7 +4976,7 @@ input[type="button"].btn-block {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .card-group > .card {
+  .card-group > .card, .card-group > .is-style-card {
     margin-bottom: 15px; }
   @media (min-width: 600px) {
     .card-group {
@@ -4984,16 +4984,16 @@ input[type="button"].btn-block {
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap; }
-      .card-group > .card {
+      .card-group > .card, .card-group > .is-style-card {
         -webkit-box-flex: 1;
             -ms-flex: 1 0 0%;
                 flex: 1 0 0%;
         margin-bottom: 0; }
-        .card-group > .card + .card {
+        .card-group > .card + .card, .card-group > .is-style-card + .card, .card-group > .card + .is-style-card, .card-group > .is-style-card + .is-style-card {
           margin-left: 0;
           border-left: 0; } }
 
-.card-columns .card {
+.card-columns .card, .card-columns .is-style-card {
   margin-bottom: 0.75rem; }
 
 @media (min-width: 600px) {
@@ -5006,17 +5006,17 @@ input[type="button"].btn-block {
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
-    .card-columns .card {
+    .card-columns .card, .card-columns .is-style-card {
       display: inline-block;
       width: 100%; } }
 
-.accordion > .card {
+.accordion > .card, .accordion > .is-style-card {
   overflow: hidden; }
-  .accordion > .card:not(:first-of-type):not(:last-of-type) {
+  .accordion > .card:not(:first-of-type):not(:last-of-type), .accordion > .is-style-card:not(:first-of-type):not(:last-of-type) {
     border-bottom: 0; }
-  .accordion > .card:first-of-type {
+  .accordion > .card:first-of-type, .accordion > .is-style-card:first-of-type {
     border-bottom: 0; }
-  .accordion > .card .card-header {
+  .accordion > .card .card-header, .accordion > .is-style-card .card-header {
     margin-bottom: -1px; }
 
 .breadcrumb {
@@ -12729,7 +12729,7 @@ body:not(.single-post) .entry-meta {
   .schema-faq .schema-faq-section p.schema-faq-answer {
     border-bottom: 0; }
 
-.card {
+.card, .is-style-card {
   overflow: hidden; }
 
 .telefono-header-wrapper {
