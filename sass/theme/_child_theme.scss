@@ -800,6 +800,10 @@ body {
 			background: transparent url('../img/marca-corte-white.svg') center/20px no-repeat !important;
 		}
 	}
+
+	img[src*=".svg"] {
+		filter: brightness(0) invert(1);
+	}
 }
 .galeria-producto {
 	transition: opacity 1s ease;
