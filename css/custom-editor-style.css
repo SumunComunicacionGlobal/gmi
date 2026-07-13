@@ -12109,7 +12109,7 @@ a.read-more, .taxonomy-description a, p.read-more a {
         -ms-flex-positive: 0;
             flex-grow: 0;
     width: 80px !important; }
-    .wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image) :not(:first-child) {
+    .wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image):not(:first-child) {
       margin-left: -32px; }
     .wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image) img {
       aspect-ratio: 1/1;
