@@ -185,7 +185,7 @@ a.read-more, .taxonomy-description a, p.read-more a {
 
 		figure.wp-block-image:not(#individual-image) {
 			flex-grow: 0;
-			width: 80px;
+			width: 80px !important;
 			margin-left: -32px;
 
 			img {
