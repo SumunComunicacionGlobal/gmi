@@ -317,10 +317,10 @@ h2, .h2 {
   font-size: 1.9rem; }
 
 h3, .h3 {
-  font-size: 1.5rem; }
+  font-size: 1.4rem; }
 
 h4, .h4 {
-  font-size: 1.3rem; }
+  font-size: 1.25rem; }
 
 h5, .h5 {
   font-size: 1.15rem; }
@@ -11975,6 +11975,11 @@ label {
   margin-top: 3rem;
   text-align: center; }
 
+.wp-block-cover:not(.alignfull),
+.wp-block-image img {
+  border-radius: 1rem; }
+
+/***/
 /* Marcas de corte en objetos */
 .marcas-corte {
   position: absolute;
@@ -12095,6 +12100,23 @@ a.read-more, .taxonomy-description a, p.read-more a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+
+.wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 80px;
+  margin-left: -32px; }
+  .wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image) img {
+    aspect-ratio: 1/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 999px;
+    border: 2px solid #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image) a:hover img {
+    opacity: .8; }
 
 .menu-link {
   height: 40px;
@@ -12640,7 +12662,7 @@ body.menu-abierto #wrapper-navbar {
   margin-bottom: 4rem; }
   .archive .producto h2.entry-title,
   .archive .page h2.entry-title {
-    font-size: 1.3rem; }
+    font-size: 1.25rem; }
   .archive .producto .entry-header .entry-header-inner,
   .archive .page .entry-header .entry-header-inner {
     display: -webkit-box;

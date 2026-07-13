@@ -40,6 +40,12 @@
 	margin-top: 3rem;
 	text-align: center;
 }
+.wp-block-cover:not(.alignfull),
+.wp-block-image img {
+	border-radius: $border-radius-lg;
+}
+/***/
+
 /* Marcas de corte en objetos */
 .marcas-corte {
 	position: absolute;
@@ -164,12 +170,36 @@ a.read-more, .taxonomy-description a, p.read-more a {
 .text-white a.read-more, .text-white .taxonomy-description a {
 	background-image: url('../img/arrow-right-circle-white.svg');
 }
-.wp-block-gallery.logos .blocks-gallery-item {
-	margin-bottom: 48px;
+.wp-block-gallery {
+	
+	&.logos .blocks-gallery-item {
+		margin-bottom: 48px;
 
-	figure {
-		justify-content: center;
-		align-items: center;
+		figure {
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&.is-style-mini-gallery.has-nested-images {
+
+		figure.wp-block-image:not(#individual-image) {
+			flex-grow: 0;
+			width: 80px;
+			margin-left: -32px;
+
+			img {
+				aspect-ratio: 1/1;
+				object-fit: cover;
+				border-radius: 999px;
+				border: 2px solid $white;
+				transition: $transition-base;
+			}
+
+			a:hover img {
+				opacity: .8;
+			}
+		}
 	}
 }
 .menu-link {

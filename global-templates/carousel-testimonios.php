@@ -56,8 +56,8 @@ defined( 'ABSPATH' ) || exit;
 
 									echo '<div class="col-sm-6 col-md-4">';
 
-										echo '<div class="numero-slide mb-3">'.$numero.'</div>';
-										echo '<div class="post-type-name mb-5">'.$pto->labels->name.'</div>';
+										// echo '<div class="numero-slide mb-3">'.$numero.'</div>';
+										// echo '<div class="post-type-name mb-5">'.$pto->labels->name.'</div>';
 										echo '<div class="h1 nombre-testimonio">'.get_the_title().'</div>';
 										echo '<div class="contenido-testimonio mb-3">"' .$post->post_excerpt. '"</div>';
 										echo '<div class="cargo">'.get_post_meta( $post->ID, 'cargo', true ).'</div>';

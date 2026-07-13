@@ -32,6 +32,14 @@ function sumun_register_group_block_styles() {
             )
         );
 
+        register_block_style(
+            'core/gallery',
+            array(
+                'name'  => 'mini-gallery',
+                'label' => __( 'Mini Gallery', 'sumun-admin' ),
+            )
+        );
+
         // register_block_style(
         //     'core/button',
         //     array(
