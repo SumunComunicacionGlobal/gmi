@@ -402,7 +402,9 @@ body {
 	}
 }
 @include media-breakpoint-up(sm) {
-	.cabecera, .wp-block-cover__inner-container {
+	.cabecera, 
+	// .wp-block-cover__inner-container,
+	.wp-block-cover__background {
 		background-image: url('../img/marca-registro-white.svg'), url('../img/marca-registro-white.svg');
 		background-position: center left 10px, center right 10px;
 		background-size: 2rem;

@@ -12284,12 +12284,14 @@ body.menu-abierto #wrapper-navbar {
     padding: 80px 0; }
 
 @media (min-width: 600px) {
-  .cabecera, .wp-block-cover__inner-container {
+  .cabecera,
+  .wp-block-cover__background {
     background-image: url("../img/marca-registro-white.svg"), url("../img/marca-registro-white.svg");
     background-position: center left 10px, center right 10px;
     background-size: 2rem;
     background-repeat: no-repeat; }
-    .cabecera + .wrapper, .wp-block-cover__inner-container + .wrapper {
+    .cabecera + .wrapper,
+    .wp-block-cover__background + .wrapper {
       background-image: url("../img/marca-registro.svg"), url("../img/marca-registro.svg"), url("../img/marca-registro.svg"), url("../img/marca-registro.svg");
       background-size: 2rem;
       background-repeat: no-repeat;
