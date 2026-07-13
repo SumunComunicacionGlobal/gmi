@@ -218,8 +218,9 @@ a.read-more, .taxonomy-description a, p.read-more a {
 
 	.wp-block-media-text__media {
 		border-radius: $border-radius-lg;
+		overflow: hidden;
 	}
-	
+
 }
 .menu-link {
 	height: 40px;
