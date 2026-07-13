@@ -12122,7 +12122,7 @@ a.read-more, .taxonomy-description a, p.read-more a {
     .wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image) a:hover img {
       opacity: .8; }
 
-.wp-block-gallery .wp-block-gallery.has-nested-images figcaption {
+.wp-block-gallery figcaption {
   font-size: 0.875rem;
   text-align: left;
   color: #6da8a5;
