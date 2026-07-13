@@ -1011,7 +1011,8 @@ body:not(.single-post) {
 	background-position: top 4px left 4px, bottom 4px right 4px;
 }
 
-.is-style-card {
+.is-style-card,
+.is-style-card.has-background {
 	@extend .card;
 	@extend .card-body;
 }

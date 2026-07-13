@@ -4855,7 +4855,8 @@ input[type="button"].btn-block {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #fff; }
 
-.card, .is-style-card {
+.card, .is-style-card,
+.is-style-card.has-background {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4869,11 +4870,12 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(1, 1, 1, 0.125); }
-  .card > hr, .is-style-card > hr {
+  .card > hr, .is-style-card > hr, .is-style-card.has-background > hr {
     margin-right: 0;
     margin-left: 0; }
 
-.card-body, .is-style-card {
+.card-body, .is-style-card,
+.is-style-card.has-background {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -12798,7 +12800,8 @@ body:not(.single-post) .entry-meta {
   .schema-faq .schema-faq-section p.schema-faq-answer {
     border-bottom: 0; }
 
-.card, .is-style-card {
+.card, .is-style-card,
+.is-style-card.has-background {
   overflow: hidden;
   border-radius: 1rem;
   background-image: url(../img/marca-registro.svg), url(../img/marca-registro.svg);
