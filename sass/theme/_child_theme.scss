@@ -205,6 +205,21 @@ a.read-more, .taxonomy-description a, p.read-more a {
 			}
 		}
 	}
+
+	.wp-block-gallery.has-nested-images figcaption {
+		font-size: $font-size-sm;
+		text-align: left;
+		color: $gray-600;
+		margin-top: 1em;
+	}
+}
+
+.wp-block-media-text {
+
+	.wp-block-media-text__media {
+		border-radius: $border-radius-lg;
+	}
+	
 }
 .menu-link {
 	height: 40px;

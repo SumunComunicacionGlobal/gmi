@@ -12122,6 +12122,15 @@ a.read-more, .taxonomy-description a, p.read-more a {
     .wp-block-gallery.is-style-mini-gallery.has-nested-images figure.wp-block-image:not(#individual-image) a:hover img {
       opacity: .8; }
 
+.wp-block-gallery .wp-block-gallery.has-nested-images figcaption {
+  font-size: 0.875rem;
+  text-align: left;
+  color: #6da8a5;
+  margin-top: 1em; }
+
+.wp-block-media-text .wp-block-media-text__media {
+  border-radius: 1rem; }
+
 .menu-link {
   height: 40px;
   line-height: 40px;
