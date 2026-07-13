@@ -208,7 +208,7 @@ a.read-more, .taxonomy-description a, p.read-more a {
 
 	figcaption {
 		font-size: $font-size-sm;
-		text-align: left;
+		text-align: left !important;
 		color: $gray-600;
 		margin-top: 1em;
 	}

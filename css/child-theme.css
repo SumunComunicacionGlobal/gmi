@@ -12123,7 +12123,7 @@ a.read-more, .taxonomy-description a, p.read-more a {
 
 .wp-block-gallery figcaption {
   font-size: 0.875rem;
-  text-align: left;
+  text-align: left !important;
   color: #6da8a5;
   margin-top: 1em; }
 
