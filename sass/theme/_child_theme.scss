@@ -12,6 +12,11 @@
 	}
 }
 
+.wp-block-cover.alignfull > .wp-block-cover__inner-container {
+	@include make-container();
+	@include make-container-max-widths();
+}
+
 .is-style-outline .wp-block-button__link {
 	border-width: 4px;
 	padding-right: $input-btn-padding-x * 3;

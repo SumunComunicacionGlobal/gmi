@@ -11947,6 +11947,25 @@ label {
   :root :where(.wp-element-button, .wp-block-button__link):not(.has-text-color):hover {
     color: #fff; }
 
+.wp-block-cover.alignfull > .wp-block-cover__inner-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 600px) {
+    .wp-block-cover.alignfull > .wp-block-cover__inner-container {
+      max-width: 530px; } }
+  @media (min-width: 783px) {
+    .wp-block-cover.alignfull > .wp-block-cover__inner-container {
+      max-width: 700px; } }
+  @media (min-width: 992px) {
+    .wp-block-cover.alignfull > .wp-block-cover__inner-container {
+      max-width: 920px; } }
+  @media (min-width: 1400px) {
+    .wp-block-cover.alignfull > .wp-block-cover__inner-container {
+      max-width: 1280px; } }
+
 .is-style-outline .wp-block-button__link {
   border-width: 4px;
   padding-right: 3rem;
