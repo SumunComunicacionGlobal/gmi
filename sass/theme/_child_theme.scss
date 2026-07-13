@@ -1012,7 +1012,7 @@ body:not(.single-post) {
 }
 
 .is-style-card,
-.is-style-card.has-background {
+.is-style-card.has-background:not(.wp-block-separator) {
 	@extend .card;
 	@extend .card-body;
 }

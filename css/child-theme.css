@@ -4855,7 +4855,7 @@ input[type="button"].btn-block {
       color: #fff; }
 
 .card, .is-style-card,
-.is-style-card.has-background {
+.is-style-card.has-background:not(.wp-block-separator) {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4869,12 +4869,12 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(1, 1, 1, 0.125); }
-  .card > hr, .is-style-card > hr, .is-style-card.has-background > hr {
+  .card > hr, .is-style-card > hr, .is-style-card.has-background:not(.wp-block-separator) > hr {
     margin-right: 0;
     margin-left: 0; }
 
 .card-body, .is-style-card,
-.is-style-card.has-background {
+.is-style-card.has-background:not(.wp-block-separator) {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -4944,7 +4944,8 @@ input[type="button"].btn-block {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .card-deck .card, .card-deck .is-style-card {
+  .card-deck .card, .card-deck .is-style-card,
+  .card-deck .is-style-card.has-background:not(.wp-block-separator) {
     margin-bottom: 15px; }
   @media (min-width: 600px) {
     .card-deck {
@@ -4954,7 +4955,8 @@ input[type="button"].btn-block {
               flex-flow: row wrap;
       margin-right: -15px;
       margin-left: -15px; }
-      .card-deck .card, .card-deck .is-style-card {
+      .card-deck .card, .card-deck .is-style-card,
+      .card-deck .is-style-card.has-background:not(.wp-block-separator) {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -4977,7 +4979,8 @@ input[type="button"].btn-block {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .card-group > .card, .card-group > .is-style-card {
+  .card-group > .card, .card-group > .is-style-card,
+  .card-group > .is-style-card.has-background:not(.wp-block-separator) {
     margin-bottom: 15px; }
   @media (min-width: 600px) {
     .card-group {
@@ -4985,7 +4988,8 @@ input[type="button"].btn-block {
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap; }
-      .card-group > .card, .card-group > .is-style-card {
+      .card-group > .card, .card-group > .is-style-card,
+      .card-group > .is-style-card.has-background:not(.wp-block-separator) {
         -webkit-box-flex: 1;
             -ms-flex: 1 0 0%;
                 flex: 1 0 0%;
@@ -4994,7 +4998,8 @@ input[type="button"].btn-block {
           margin-left: 0;
           border-left: 0; } }
 
-.card-columns .card, .card-columns .is-style-card {
+.card-columns .card, .card-columns .is-style-card,
+.card-columns .is-style-card.has-background:not(.wp-block-separator) {
   margin-bottom: 0.75rem; }
 
 @media (min-width: 600px) {
@@ -5007,11 +5012,13 @@ input[type="button"].btn-block {
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
-    .card-columns .card, .card-columns .is-style-card {
+    .card-columns .card, .card-columns .is-style-card,
+    .card-columns .is-style-card.has-background:not(.wp-block-separator) {
       display: inline-block;
       width: 100%; } }
 
-.accordion > .card, .accordion > .is-style-card {
+.accordion > .card, .accordion > .is-style-card,
+.accordion > .is-style-card.has-background:not(.wp-block-separator) {
   overflow: hidden; }
   .accordion > .card:not(:first-of-type):not(:last-of-type), .accordion > .is-style-card:not(:first-of-type):not(:last-of-type) {
     border-bottom: 0; }
@@ -12800,7 +12807,7 @@ body:not(.single-post) .entry-meta {
     border-bottom: 0; }
 
 .card, .is-style-card,
-.is-style-card.has-background {
+.is-style-card.has-background:not(.wp-block-separator) {
   overflow: hidden;
   border-radius: 1rem;
   background-image: url(../img/marca-registro.svg), url(../img/marca-registro.svg);
