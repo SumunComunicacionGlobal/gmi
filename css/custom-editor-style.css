@@ -12633,7 +12633,8 @@ body.menu-abierto #wrapper-navbar {
 
 .text-white img[src*=".svg"], .bg-primary img[src*=".svg"], .wp-block-cover img[src*=".svg"] {
   -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1); }
+          filter: brightness(0) invert(1);
+  border-radius: 0; }
 
 .galeria-producto {
   -webkit-transition: opacity 1s ease;
