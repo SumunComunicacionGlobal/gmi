@@ -12163,6 +12163,10 @@ a.read-more, .taxonomy-description a, p.read-more a {
   border-radius: 1rem;
   overflow: hidden; }
 
+.wp-block-media-text .wp-block-media-text__content {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
 .menu-link {
   height: 40px;
   line-height: 40px;
