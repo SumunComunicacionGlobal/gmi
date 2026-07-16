@@ -12155,6 +12155,10 @@ a.read-more, .taxonomy-description a, p.read-more a {
   color: #6da8a5;
   margin-top: 1em; }
 
+.wp-block-media-text:not(.has-background) {
+  border: 1px solid #dadada;
+  border-radius: 1rem; }
+
 .wp-block-media-text .wp-block-media-text__media {
   border-radius: 1rem;
   overflow: hidden; }

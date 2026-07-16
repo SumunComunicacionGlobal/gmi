@@ -221,6 +221,11 @@ a.read-more, .taxonomy-description a, p.read-more a {
 
 .wp-block-media-text {
 
+	&:not(.has-background) {
+		border: $border-width solid $light;
+		border-radius: $border-radius-lg;
+	}
+
 	.wp-block-media-text__media {
 		border-radius: $border-radius-lg;
 		overflow: hidden;
