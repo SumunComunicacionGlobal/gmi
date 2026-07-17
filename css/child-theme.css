@@ -12815,7 +12815,7 @@ body:not(.single-post) .entry-meta {
     border-bottom: 0; }
   .schema-faq .schema-faq-section .schema-faq-question,
   .schema-faq .schema-faq-section .schema-faq-question h3,
-  .schema-faq .schema-faq-section .schema-faq-section h3 {
+  .schema-faq .schema-faq-section h3 {
     font-size: 1rem;
     margin-bottom: 0; }
 
