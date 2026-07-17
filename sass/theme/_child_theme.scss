@@ -1012,7 +1012,8 @@ body:not(.single-post) {
 	}
 
 	.schema-faq-question, 
-	.schema-faq-question h3 {
+	.schema-faq-question h3,
+	.schema-faq-section h3 {
 		font-size: $font-size-base;
 		margin-bottom: 0;
 	}
