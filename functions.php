@@ -123,6 +123,26 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'slick', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', null, null, false );
     wp_enqueue_script( 'sumun-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+    $faq_inline_js = <<<'JS'
+(function($){
+    function ensureFaqHeading() {
+        if (!$('.schema-faq-question').length) {
+            return;
+        }
+
+        $('.schema-faq-question').each(function() {
+            var $el = $(this);
+            if (!$el.children('h3').length) {
+                $el.wrapInner('<h3></h3>');
+            }
+        });
+    }
+
+    $(ensureFaqHeading);
+    $(window).on('load', ensureFaqHeading);
+})(jQuery);
+JS;
+    wp_add_inline_script( 'sumun-scripts', $faq_inline_js, 'after' );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }

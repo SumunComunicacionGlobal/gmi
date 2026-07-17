@@ -11,28 +11,30 @@
         }
     });
 
-    $('.galeria-producto').on('init', function (slick) {
-        $('.galeria-producto-controls a[data-slide="0"]').addClass('active');
-        $(this).fadeIn();
-    });
-    $('.galeria-producto').slick();
-    $('a[data-slide]').click(function(e) {
-        e.preventDefault();
-        var sliderId = $(this).attr('href');
-        var slideNo = $(this).data('slide');
-        $( sliderId ).slick('slickGoTo', slideNo );
-    });
-    $('.galeria-producto').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        console.log(event);
-        var sliderId = event['currentTarget']['id'];
+    if ($.fn.slick) {
+        $('.galeria-producto').on('init', function (slick) {
+            $('.galeria-producto-controls a[data-slide="0"]').addClass('active');
+            $(this).fadeIn();
+        });
+        $('.galeria-producto').slick();
+        $('a[data-slide]').click(function(e) {
+            e.preventDefault();
+            var sliderId = $(this).attr('href');
+            var slideNo = $(this).data('slide');
+            $( sliderId ).slick('slickGoTo', slideNo );
+        });
+        $('.galeria-producto').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            console.log(event);
+            var sliderId = event['currentTarget']['id'];
 
-        $('.galeria-producto-controls a[href="#' + sliderId + '"]').removeClass('active');
-        $('.galeria-producto-controls a[href="#' + sliderId + '"][data-slide="' + nextSlide + '"]').addClass('active');
-    });
+            $('.galeria-producto-controls a[href="#' + sliderId + '"]').removeClass('active');
+            $('.galeria-producto-controls a[href="#' + sliderId + '"][data-slide="' + nextSlide + '"]').addClass('active');
+        });
+    }
 
     $('#menu-principal a').click(function(e) {
-        href = $(this).attr('href').split("#")[0];
-        currentUrl = window.location.href.split("#")[0];
+        var href = $(this).attr('href').split("#")[0];
+        var currentUrl = window.location.href.split("#")[0];
         href = href.replace(/(^\w+:|^)\/\//, '');
         currentUrl = currentUrl.replace(/(^\w+:|^)\/\//, '');
         
@@ -42,12 +44,17 @@
         }
     });
 
-    $('.schema-faq-question').each(function() {
-        var $el = $(this);
-        if (!$el.children('h3').length) {
-            $el.wrapInner('<h3></h3>');
-        }
-    });
+    function ensureFaqQuestionHeading() {
+        $('.schema-faq-question').each(function() {
+            var $el = $(this);
+            if (!$el.children('h3').length) {
+                $el.wrapInner('<h3></h3>');
+            }
+        });
+    }
+
+    ensureFaqQuestionHeading();
+    $(window).on('load', ensureFaqQuestionHeading);
 
 })(jQuery);
 
