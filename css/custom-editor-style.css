@@ -12814,6 +12814,10 @@ body:not(.single-post) .entry-meta {
   .schema-faq .schema-faq-section .schema-faq-question.faq-q-open,
   .schema-faq .schema-faq-section p.schema-faq-answer {
     border-bottom: 0; }
+  .schema-faq .schema-faq-section .schema-faq-question,
+  .schema-faq .schema-faq-section .schema-faq-question h3 {
+    font-size: 1rem;
+    margin-bottom: 0; }
 
 .card, .is-style-card,
 .is-style-card.has-background:not(.wp-block-separator) {

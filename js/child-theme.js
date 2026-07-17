@@ -7092,8 +7092,8 @@
 
     $('.schema-faq-question').each(function() {
         var $el = $(this);
-        if (!$el.children('h3').length) {
-            $el.wrapInner('<h3></h3>');
+        if (!$el.parent().is('h3')) {
+            $el.wrap('<h3></h3>');
         }
     });
 
